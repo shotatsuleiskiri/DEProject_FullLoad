@@ -17,16 +17,16 @@ class ReadYaml:
         return yaml_data[self.key]
     
     def getTableName(self ):
-        return self.getYaml()['TableName']
+        return self.__getYaml()['TableName']
     
     def getDBName(self ):
-        return self.getYaml()['DBName']
+        return self.__getYaml()['DBName']
     
     def getSchema(self ):
-        return self.getYaml()['Schema']
+        return self.__getYaml()['Schema']
     
     def getTableType(self ):
-        return self.getYaml()['TableType']
+        return self.__getYaml()['TableType']
     
     
 testread = ReadYaml("/Users/ramazkapanadze/DEProject/DEProject/conf/tostaging/dvdrental/full/full.yaml", 'public.category')
