@@ -1,7 +1,6 @@
 import yaml
 import os
 
-
 class ReadYaml:
 
     def __init__(self, path, key):
@@ -32,7 +31,7 @@ class ReadYaml:
 testread = ReadYaml("/Users/ramazkapanadze/DEProject/DEProject/conf/tostaging/dvdrental/full/full.yaml", 'public.category')
 
 
-print(testread.getTableName())
-print(testread.getDBName())
-print(testread.getSchema())
-print(testread.getTableType())
+# print(testread.getTableName())
+# print(testread.getDBName())
+# print(testread.getSchema())
+# print(testread.getTableType())

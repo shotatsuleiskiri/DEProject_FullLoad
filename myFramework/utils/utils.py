@@ -9,9 +9,9 @@ def getTbaleList(dbname, schema):
                         ,conn.getConnection(dbname))
 
 
-def fillstaging(df, dst_dbname, schema, tablename,inserttype):
+def fillstaging(df, dst_dbname, schema, tablename):
         df.to_sql(tablename, conn.getConnection(dst_dbname)
-                , schema=f"{schema}", if_exists=inserttype, index=False)
+                , schema=f"{schema}", if_exists='replace', index=False)
         
 
 def getDF( source_dbname, tablename, schema):
@@ -19,8 +19,8 @@ def getDF( source_dbname, tablename, schema):
                 ,conn.getConnection(source_dbname))
 
 
-def getDF( source_dbname, tablename,schema,colName, dateFrom, dateTo):
-        return pd.read_sql(f"select * from {schema}.{tablename} where {dateFrom}>= {colName} and {dateTo} < {colName}"
-                ,conn.getConnection(source_dbname))
+# def getDF( source_dbname, tablename,schema,colName, dateFrom, dateTo):
+#         return pd.read_sql(f"select * from {schema}.{tablename} where {dateFrom}>= {colName} and {dateTo} < {colName}"
+#                 ,conn.getConnection(source_dbname))
 
 
