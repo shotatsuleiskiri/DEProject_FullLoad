@@ -7,7 +7,7 @@ from sqltostaging.full.toStaging import ToStaging as toStaging_full
 from myFramework.utils.readYaml import ReadYaml
 
 
-testread = ReadYaml("/Users/ramazkapanadze/DEProject/DEProject/conf/tostaging/dvdrental/full/full.yaml", 'public.category')
+testread = ReadYaml("/Users/mariammakharadze/DEProject/DEProject/conf/tostaging/dvdrental/full/full.yaml", 'public.category')
 
 
 
